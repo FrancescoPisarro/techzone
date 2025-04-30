@@ -1,82 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://francescopisarro.github.io/techzone/</loc>
-  <lastmod>2025-04-30T17:46:08+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://francescopisarro.github.io/techzone/index.html</loc>
-  <lastmod>2025-04-30T17:46:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://francescopisarro.github.io/techzone/articoli.html</loc>
-  <lastmod>2025-04-30T17:46:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://francescopisarro.github.io/techzone/videogiochi.html</loc>
-  <lastmod>2025-04-30T17:46:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://francescopisarro.github.io/techzone/videolezioni.html</loc>
-  <lastmod>2025-04-30T17:46:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://francescopisarro.github.io/techzone/download.html</loc>
-  <lastmod>2025-04-30T17:46:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://francescopisarro.github.io/techzone/chi-sono.html</loc>
-  <lastmod>2025-04-30T17:46:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://francescopisarro.github.io/techzone/informatica.html</loc>
-  <lastmod>2025-04-30T17:46:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://francescopisarro.github.io/techzone/programmazione.html</loc>
-  <lastmod>2025-04-30T17:46:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://francescopisarro.github.io/techzone/risposte.html</loc>
-  <lastmod>2025-04-30T17:46:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://francescopisarro.github.io/techzone/sicurezza.html</loc>
-  <lastmod>2025-04-30T17:46:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://francescopisarro.github.io/techzone/articoli/linux.html</loc>
-  <lastmod>2025-04-30T17:46:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://francescopisarro.github.io/techzone/articoli/windows.html</loc>
-  <lastmod>2025-04-30T17:46:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://francescopisarro.github.io/techzone/articoli/html-css.html</loc>
-  <lastmod>2025-04-30T17:46:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://francescopisarro.github.io/techzone/index.html</loc>
+    <lastmod>2025-04-30</lastmod>
+  </url>
+  <url>
+    <loc>https://francescopisarro.github.io/techzone/articoli.html</loc>
+    <lastmod>2025-04-30</lastmod>
+  </url>
+  <url>
+    <loc>https://francescopisarro.github.io/techzone/base.html</loc>
+    <lastmod>2025-04-30</lastmod>
+  </url>
+  <url>
+    <loc>https://francescopisarro.github.io/techzone/chi-sono.html</loc>
+    <lastmod>2025-04-30</lastmod>
+  </url>
+  <url>
+    <loc>https://francescopisarro.github.io/techzone/download.html</loc>
+    <lastmod>2025-04-30</lastmod>
+  </url>
+  <url>
+    <loc>https://francescopisarro.github.io/techzone/informatica.html</loc>
+    <lastmod>2025-04-30</lastmod>
+  </url>
+  <url>
+    <loc>https://francescopisarro.github.io/techzone/programmazione.html</loc>
+    <lastmod>2025-04-30</lastmod>
+  </url>
+  <url>
+    <loc>https://francescopisarro.github.io/techzone/risposte.html</loc>
+    <lastmod>2025-04-30</lastmod>
+  </url>
+  <url>
+    <loc>https://francescopisarro.github.io/techzone/sicurezza.html</loc>
+    <lastmod>2025-04-30</lastmod>
+  </url>
+  <url>
+    <loc>https://francescopisarro.github.io/techzone/videogiochi.html</loc>
+    <lastmod>2025-04-30</lastmod>
+  </url>
+  <url>
+    <loc>https://francescopisarro.github.io/techzone/videolezioni.html</loc>
+    <lastmod>2025-04-30</lastmod>
+  </url>
 </urlset>
