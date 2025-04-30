@@ -57,10 +57,18 @@ body {
 
 /* Hero */
 .hero {
-  background: linear-gradient(to right, #3b82f6, #2563eb);
+  background: linear-gradient(to right, #a4acb4, #6f7786);
   color: white;
   text-align: center;
+  margin: 0 auto;
   padding: 4rem 3rem;
+  width: 1200px;
+}
+
+.hero .hero-content {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .hero h1 {
@@ -119,3 +127,17 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
 }
+
+.hero-banner {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
