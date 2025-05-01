@@ -70,7 +70,7 @@ body {
 
 .hero {
   /*background: linear-gradient(to right, #a4acb4, #6f7786);*/
-  background-image: url('..img/sfondo2.jpg');
+  background-image: url('../img/sfondo2.jpg');
   background-size: cover;        /* Copre tutta l'area*/ 
   color: white;
   padding: 4rem 3rem;
