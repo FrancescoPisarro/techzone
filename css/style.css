@@ -259,3 +259,43 @@ p {
   color: #333;
   line-height: 1.5;
 }
+
+/*----------------------------------*/
+#slider-bottom, #slider-overlay {
+  position: relative;
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+#slider-bottom img,
+#slider-overlay img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+#caption-bottom {
+  padding: 1rem;
+  background-color: #fff;
+  font-size: 1.1rem;
+}
+
+.caption-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 1.1rem;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+}
+
+button {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}

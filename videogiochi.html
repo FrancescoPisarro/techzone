@@ -20,6 +20,9 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
+<script src="assets/js/slider.js"></script>
+
 <body>
 
   <header>
@@ -53,6 +56,26 @@
       <section style="min-height: 80vh; padding: 3rem 0;">
         <h2>Contenuto in arrivo...</h2>
         <p>Questa sezione è in fase di costruzione. Presto troverai qui articoli, guide o risorse su <strong>Videogiochi</strong>.</p>
+
+        <h2 style="text-align:center;">Slider con didascalia</h2>
+<button onclick="toggleSlider()" style="display:block; margin: 1rem auto;">Cambia visuale</button>
+
+<!-- Slider con didascalia sotto -->
+<div id="slider-bottom">
+  <button onclick="showBottom(indexBottom - 1)">&#10094;</button>
+  <img src="assets/img/tombraider.jpg" id="slider-img-bottom" alt="Slideshow">
+  <div id="caption-bottom">Didascalia sotto l'immagine</div>
+  <button onclick="showBottom(indexBottom + 1)">&#10095;</button>
+</div>
+
+<!-- Slider con didascalia sovrapposta -->
+<div id="slider-overlay" style="display:none;">
+  <button onclick="showOverlay(indexOverlay - 1)">&#10094;</button>
+  <img src="assets/img/tombraider.jpg" id="slider-img-overlay" alt="Slideshow">
+  <div id="caption-overlay" class="caption-overlay">Didascalia sovrapposta</div>
+  <button onclick="showOverlay(indexOverlay + 1)">&#10095;</button>
+</div>
+
       </section>
     </div>
   
