@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classifica Quiz</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 1.5rem;
+    }
+    ul#leaderboard {
+      list-style: none;
+      padding: 0;
+      max-width: 500px;
+      margin: 0 auto 2rem;
+    }
+    ul#leaderboard li {
+      background: white;
+      margin-bottom: 0.5rem;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .btn {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .btn:hover {
+      background-color: #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <h1>🏆 Classifica Quiz</h1>
+  <ul id="leaderboard"></ul>
+
+  <button class="btn" onclick="clearLeaderboard()">🔁 Azzera Classifica</button>
+  <a href="quiz.html" class="btn">⬅️ Torna al Quiz</a>
+
+  <script>
+    function loadLeaderboard() {
+      const board = JSON.parse(localStorage.getItem("classificaQuiz")) || [];
+      const list = document.getElementById("leaderboard");
+      list.innerHTML = "";
+      board.forEach(entry => {
+        const li = document.createElement("li");
+        li.textContent = `${entry.name} – ${entry.score}/10 (${entry.date})`;
+        list.appendChild(li);
+      });
+    }
+
+    function clearLeaderboard() {
+      if (confirm("Sei sicuro di voler azzerare la classifica?")) {
+        localStorage.removeItem("classificaQuiz");
+        loadLeaderboard();
+      }
+    }
+
+    loadLeaderboard();
+  </script>
+</body>
+</html>

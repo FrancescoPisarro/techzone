@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz 2 - Programmazione</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .quiz-container {
+      max-width: 700px;
+      margin: 4rem auto;
+      background-color: #f9fafb;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .question {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .option {
+      display: block;
+      padding: 0.8rem;
+      margin-bottom: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .option:hover {
+      background-color: #e0e7ff;
+    }
+    .result {
+      margin-top: 1.5rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container" id="start-screen">
+    <h2>Inserisci il tuo nome per iniziare</h2>
+    <input type="text" id="username" placeholder="Il tuo nome" />
+    <button onclick="startQuiz()" class="btn-primary">Inizia</button>
+  </div>
+
+  <div class="quiz-container" id="quiz-screen" style="display:none;">
+    <h1>Quiz 2: Programmazione</h1>
+    <div class="question" id="question">Domanda...</div>
+    <div id="options"></div>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    let current = 0;
+    let score = 0;
+    let username = "";
+
+    const quizData = [
+      { question: "Cosa significa "function" in JavaScript?", options: ["Una condizione", "Un ciclo", "Una funzione"], correct: 2 },
+      { question: "Quale simbolo si usa per assegnare un valore in molti linguaggi?", options: ["==", "=", ":="], correct: 1 },
+      { question: "Quale linguaggio è principalmente usato per lo sviluppo web lato client?", options: ["Python", "JavaScript", "C++"], correct: 1 },
+      { question: "Cosa produce un ciclo for?", options: ["Condizione logica", "Ripetizione di blocchi di codice", "Output grafico"], correct: 1 },
+      { question: "Che cos'è un array?", options: ["Una funzione", "Una struttura dati", "Un ciclo"], correct: 1 },
+      { question: "Come si dichiara una variabile in JavaScript?", options: ["let x = 5;", "var: x = 5", "x <- 5"], correct: 0 },
+      { question: "Che cos'è il debugging?", options: ["Scrivere codice", "Trovare e correggere errori", "Tradurre codice"], correct: 1 },
+      { question: "Cosa fa la funzione console.log()?", options: ["Crea una finestra", "Stampa in console", "Avvia un ciclo"], correct: 1 },
+      { question: "Cos'è una variabile booleana?", options: ["Numerica", "Vera o falsa", "Testuale"], correct: 1 },
+      { question: "Quale linguaggio è noto per il machine learning?", options: ["HTML", "C", "Python"], correct: 2 }
+    ];
+
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    function startQuiz() {
+      username = document.getElementById("username").value.trim();
+      if (!username) {
+        alert("Inserisci un nome.");
+        return;
+      }
+      document.getElementById("start-screen").style.display = "none";
+      document.getElementById("quiz-screen").style.display = "block";
+      shuffle(quizData);
+      loadQuestion();
+    }
+
+    function loadQuestion() {
+      const q = quizData[current];
+      document.getElementById("question").textContent = q.question;
+      const optionsDiv = document.getElementById("options");
+      optionsDiv.innerHTML = "";
+      q.options.forEach((text, i) => {
+        const btn = document.createElement("div");
+        btn.className = "option";
+        btn.textContent = text;
+        btn.onclick = () => checkAnswer(i);
+        optionsDiv.appendChild(btn);
+      });
+    }
+
+    function checkAnswer(i) {
+      const correct = quizData[current].correct;
+      const result = document.getElementById("result");
+      if (i === correct) {
+        score++;
+        result.textContent = "✅ Corretto!";
+      } else {
+        result.textContent = "❌ Errato!";
+      }
+      setTimeout(() => {
+        result.textContent = "";
+        current++;
+        if (current < quizData.length) {
+          loadQuestion();
+        } else {
+          showFinalScore();
+        }
+      }, 1500);
+    }
+
+    function showFinalScore() {
+      document.getElementById("question").textContent = `Quiz completato!`;
+      document.getElementById("options").innerHTML = "";
+      document.getElementById("result").textContent = `Punteggio: ${score} su ${quizData.length}`;
+      const entry = { name: username, score: score, date: new Date().toLocaleDateString() };
+      let leaderboard = JSON.parse(localStorage.getItem("classificaQuiz2")) || [];
+      leaderboard.push(entry);
+      leaderboard.sort((a, b) => b.score - a.score);
+      leaderboard = leaderboard.slice(0, 10);
+      localStorage.setItem("classificaQuiz2", JSON.stringify(leaderboard));
+    }
+  </script>
+</body>
+</html>
