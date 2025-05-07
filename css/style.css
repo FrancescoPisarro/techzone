@@ -299,3 +299,11 @@ button {
   margin: 0.5rem;
   cursor: pointer;
 }
+
+.faq-section ol {
+  padding-left: 2rem;
+  line-height: 1.6;
+}
+.faq-section li {
+  margin-bottom: 0.5rem;
+}
